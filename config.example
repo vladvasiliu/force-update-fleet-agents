@@ -1,0 +1,6 @@
+# Copy this file to config.py and update the fields below per your requirements
+
+API_KEY = "KIBANA KEY"
+AGENT_VERSION_TARGET = "8.6.2"
+AGENT_VERSION_MIN = "8.2"  # v8.1 has a bug which prevents update via fleet
+KIBANA_BASE_URL = "https://KIBANA.YOUR.DOMAIN.COM"
