@@ -11,7 +11,7 @@ except ImportError:
         "Failed to import config file. Please create `config.py` by copying `config.example`"
     )
 
-KUERY = f'kuery=agent.version<"{AGENT_VERSION_TARGET}" and agent.version>="{AGENT_VERSION_MIN}" and last_checkin>="now-15m" and local_metadata.elastic.agent.upgradeable : true'
+KUERY = f'kuery=local_metadata.elastic.agent.upgradeable : true and not local_metadata.elastic.agent.version : 8.10.2 and last_checkin >= now-15m'
 
 
 @dataclasses.dataclass
